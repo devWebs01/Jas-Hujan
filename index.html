@@ -1,320 +1,509 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-    <head>
-        <title>Title</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous" />
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
-        <!-- Fonts & Icons -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        background: #fafafa;
+      }
 
-        <style>
-            body {
-                font-family: "Poppins", sans-serif;
-                font-weight: 500;
-                font-style: normal;
-                background: #FAFAFA;
-            }
+      .btn-primary {
+        background-color: #5c40cc;
+        border-color: #5c40cc;
+      }
 
-            .btn-primary {
-                background-color: #5C40CC;
-                border-color: #5C40CC;
-            }
+      .btn-primary:hover,
+      .btn-primary:focus,
+      .btn-primary:active,
+      .btn-primary.active,
+      .btn-primary:active:focus,
+      .btn-primary:active:hover,
+      .btn-primary.active:hover,
+      .btn-primary.active:focus,
+      .show > .btn-primary.dropdown-toggle {
+        background-color: #c8baff;
+        border-color: #c8baff;
+      }
 
-            .btn-primary:hover,
-            .btn-primary:focus,
-            .btn-primary:active,
-            .btn-primary.active,
-            .btn-primary:active:focus,
-            .btn-primary:active:hover,
-            .btn-primary.active:hover,
-            .btn-primary.active:focus,
-            .show>.btn-primary.dropdown-toggle {
-                background-color: #C8BAFF;
-                border-color: #C8BAFF;
-            }
+      .text-primary {
+        color: #5c40cc !important;
+      }
 
-            .text-primary {
-                color: #5C40CC !important;
-            }
+      .bg-primary {
+        background-color: #5c40cc !important;
+      }
 
-            .bg-primary {
-                background-color: #5C40CC !important;
-            }
+      .border-primary {
+        border-color: #5c40cc !important;
+      }
 
-            .border-primary {
-                border-color: #5C40CC !important;
-            }
+      .marquee {
+        display: flex;
+        block-size: var(--marquee-item-height);
+        margin-block: var(--marquee-item-height);
+        position: relative;
+        overflow-x: hidden;
+        mask-image: linear-gradient(
+          to right,
+          hsl(0 0% 0% / 0),
+          hsl(0 0% 0% / 1) 20%,
+          hsl(0 0% 0% / 1) 80%,
+          hsl(0 0% 0% / 0)
+        );
+        min-height: 200px;
+      }
 
-            .marquee {
-                display: flex;
-                block-size: var(--marquee-item-height);
-                margin-block: var(--marquee-item-height);
-                position: relative;
-                overflow-x: hidden;
-                mask-image: linear-gradient(to right,
-                        hsl(0 0% 0% / 0),
-                        hsl(0 0% 0% / 1) 20%,
-                        hsl(0 0% 0% / 1) 80%,
-                        hsl(0 0% 0% / 0));
-                min-height: 300px;
-            }
+      .marquee--3 {
+        --marquee-item-width: 150px;
+        --marquee-item-height: 150px;
+        --marquee-duration: 24s;
+        --marquee-items: 3;
+      }
 
-            .marquee--3 {
-                --marquee-item-width: 150px;
-                --marquee-item-height: 150px;
-                --marquee-duration: 24s;
-                --marquee-items: 3;
-            }
+      .marquee--omega {
+        --marquee-max-width: min(600px, 90vw);
+        max-inline-size: var(--marquee-max-width);
+        margin-inline: auto;
+        mask-image: linear-gradient(
+          to right,
+          hsl(0 0% 0% / 0),
+          hsl(0 0% 0% / 1) 10%,
+          hsl(0 0% 0% / 1) 90%,
+          hsl(0 0% 0% / 0)
+        );
+      }
 
-            .marquee--omega {
-                --marquee-max-width: min(600px, 90vw);
-                max-inline-size: var(--marquee-max-width);
-                margin-inline: auto;
-                mask-image: linear-gradient(to right,
-                        hsl(0 0% 0% / 0),
-                        hsl(0 0% 0% / 1) 10%,
-                        hsl(0 0% 0% / 1) 90%,
-                        hsl(0 0% 0% / 0));
-            }
+      .marquee__item {
+        --marquee-item-offset: max(
+          calc(var(--marquee-item-width) * var(--marquee-items)),
+          calc(100% + var(--marquee-item-width))
+        );
+        --marquee-delay: calc(
+          var(--marquee-duration) / var(--marquee-items) *
+            (var(--marquee-items) - var(--marquee-item-index)) * -1
+        );
+        position: absolute;
+        inset-inline-start: var(--marquee-item-offset);
+        transform: translateX(-50%);
+        animation: go linear var(--marquee-duration) var(--marquee-delay, 0s)
+          infinite;
+      }
 
-            .marquee__item {
-                --marquee-item-offset: max(calc(var(--marquee-item-width) * var(--marquee-items)),
-                        calc(100% + var(--marquee-item-width)));
-                --marquee-delay: calc(var(--marquee-duration) / var(--marquee-items) * (var(--marquee-items) - var(--marquee-item-index)) * -1);
-                position: absolute;
-                inset-inline-start: var(--marquee-item-offset);
-                transform: translateX(-50%);
-                animation: go linear var(--marquee-duration) var(--marquee-delay, 0s) infinite;
-            }
+      .marquee__item:nth-child(3n) {
+        border-top-right-radius: 1rem;
+      }
 
-            .marquee__item:nth-child(3n) {
-                border-top-right-radius: 1rem;
-            }
+      .marquee__item:nth-child(3n + 1) {
+        border-bottom-right-radius: 1rem;
+      }
 
-            .marquee__item:nth-child(3n + 1) {
-                border-bottom-right-radius: 1rem;
-            }
+      .marquee__item:nth-child(3n + 2) {
+        border-bottom-left-radius: 1rem;
+      }
 
-            .marquee__item:nth-child(3n + 2) {
-                border-bottom-left-radius: 1rem;
-            }
+      .marquee--3 .marquee__item:nth-of-type(1) {
+        --marquee-item-index: 1;
+      }
 
-            .marquee--3 .marquee__item:nth-of-type(1) {
-                --marquee-item-index: 1;
-            }
+      .marquee--3 .marquee__item:nth-of-type(2) {
+        --marquee-item-index: 2;
+      }
 
-            .marquee--3 .marquee__item:nth-of-type(2) {
-                --marquee-item-index: 2;
-            }
+      .marquee--3 .marquee__item:nth-of-type(3) {
+        --marquee-item-index: 3;
+      }
 
-            .marquee--3 .marquee__item:nth-of-type(3) {
-                --marquee-item-index: 3;
-            }
+      @keyframes go {
+        to {
+          inset-inline-start: calc(var(--marquee-item-width) * -1);
+        }
+      }
+    </style>
+  </head>
 
-            @keyframes go {
-                to {
-                    inset-inline-start: calc(var(--marquee-item-width) * -1);
-                }
-            }
-        </style>
-    </head>
-
-    <body>
-        <header>
-            <div class="header-nav mt-3">
-                <nav class="navbar navbar-danger">
-                    <div class="container">
-                        <a class="navbar-brand">
-                            <img loading="lazy" title="Logo Navbar" src="./assets/img/logo.png" alt="Logo Navbar"
-                                width="100">
-                        </a>
-                        <div class="justify-content-end">
-                            <a class="btn text-dark border-0 fw-semibold" href="#features" role="button">
-                                Features
-                            </a>
-                            <a class="btn text-dark border-0 fw-semibold" href="#testimonial" role="button">
-                                Testimonial
-                            </a>
-                            <a class=" btn btn-primary btn-sm rounded-4" href="#started" role="button">
-                                Get Started
-                            </a>
-                        </div>
-                    </div>
-                </nav>
+  <body>
+    <header>
+      <div class="header-nav mt-3">
+        <nav class="navbar navbar-danger">
+          <div class="container">
+            <a class="navbar-brand">
+              <img
+                loading="lazy"
+                title="Logo Navbar"
+                src="./assets/img/logo.png"
+                alt="Logo Navbar"
+                width="100"
+              />
+            </a>
+            <div class="justify-content-end">
+              <a
+                class="btn text-dark border-0 fw-semibold"
+                href="#features"
+                role="button"
+              >
+                Features
+              </a>
+              <a
+                class="btn text-dark border-0 fw-semibold"
+                href="#testimonial"
+                role="button"
+              >
+                Testimonial
+              </a>
+              <a
+                class="btn btn-primary btn-sm rounded-4"
+                href="#started"
+                role="button"
+              >
+                Get Started
+              </a>
             </div>
-        </header>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-        <main>
-            <section class="py-5" id="started">
-                <div class="container">
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-lg-6 mb-5 mb-lg-0">
-                            <div class="pe-lg-3">
-                                <h1 class="display-5 fw-bold mb-2 mb-md-3">The Best IT Products
-                                    for Your Business.</h1>
-                                <p class="lead mb-4">Exclusive discounts and access to hard-to-find IT products,
-                                    Perfect for merchants like you.</p>
-                            </div>
-                            <div class="row">
-                                <div class="col-auto mb-3 mb-sm-0">
-                                    <a class="btn btn-primary btn-lg rounded-5" href="#" role="button">Download App</a>
-                                </div>
-                                <div class="col-auto">
-                                    <a class="btn text-dark fw-semibold btn-lg rounded-5" href="#"
-                                        role="button">Reviews</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="ps-lg-5">
-                                <img src="./assets/img/hero.png" class="img-fluid rounded-top" alt="" />
-                            </div>
-                        </div>
-                    </div>
+    <main>
+      <section class="py-5" id="started">
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <div class="pe-lg-3">
+                <h1 class="display-5 fw-bold mb-2 mb-md-3">
+                  The Best IT Products for Your Business.
+                </h1>
+              </div>
+              <div class="mb-3">
+                <a
+                  class="btn btn-primary btn-lg rounded-5"
+                  href="#"
+                  role="button"
+                  >Download App</a
+                >
+                <a
+                  class="btn text-dark fw-semibold btn-lg rounded-5"
+                  href="#"
+                  role="button"
+                  >Reviews</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="ps-lg-5">
+                <img
+                  src="./assets/img/hero.png"
+                  class="img-fluid rounded-top"
+                  alt="hero image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5 mt-5" id="why-choose">
+        <h4 class="fw-bold text-center">Why Choose Thrive Marketplace?</h4>
+        <div class="container">
+          <div class="row d-flex justify-content-center mt-5 gy-5">
+            <div class="col-md-4">
+              <div class="card text-center border-0 py-5 rounded-5">
+                <div class="card-header bg-body border-0">
+                  <img src="./assets/img/icon-1.png" alt="" />
                 </div>
-            </section>
-
-            <section class="py-5 mt-5" id="why-choose">
-                <h4 class="fw-bold text-center">Why Choose Thrive Marketplace?</h4>
-                <div class="container">
-
-                    <div class="row d-flex justify-content-center mt-5 gy-5">
-                        <div class="col-md-4">
-                            <div class="card text-center border-0 py-5 rounded-5">
-                                <div class="card-header bg-body border-0">
-                                    <img src="./assets/img/icon-1.png" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title mb-4">
-                                        Exclusive Discounts & <br>
-                                        Clearance Sales</h5>
-                                    <p class="card-text lead">Take advantage of unbeatable prices on IT products,
-                                        perfect for
-                                        stocking up your store.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card text-center border-0 py-5 rounded-5">
-                                <div class="card-header bg-body border-0">
-                                    <img src="./assets/img/icon-2.png" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title mb-4">Unique & <br>
-                                        Hard-to-Find IT Products</h5>
-                                    <p class="card-text lead">Get your hands on the latest and most unique IT products
-                                        that
-                                        are not easily found elsewhere.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card text-center border-0 py-5 rounded-5">
-                                <div class="card-header bg-body border-0">
-                                    <img src="./assets/img/icon-3.png" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h5 class="card-title mb-4">New Arrivals <br>
-                                        Assistance</h5>
-                                    <p class="card-text lead">Need something specific? We can help you find the latest
-                                        IT
-                                        products just hitting the market.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-body">
+                  <h5 class="card-title mb-4">
+                    Exclusive Discounts & <br />
+                    Clearance Sales
+                  </h5>
+                  <p class="card-text lead">
+                    Take advantage of unbeatable prices on IT products, perfect
+                    for stocking up your store.
+                  </p>
                 </div>
-            </section>
-
-            <section class="py-5 mt-5" id="testimonial">
-                <h4 class="fw-bold text-center">What Our Merchants Say</h4>
-                <div class="container">
-                    <div class="marquee marquee--3">
-                        <!-- 1 -->
-                        <div class="card marquee__item" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        <!-- 1 -->
-                        <div class="card marquee__item" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        <!-- 1 -->
-                        <div class="card marquee__item" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        <!-- 1 -->
-                        <div class="card marquee__item" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        <!-- 1 -->
-                        <div class="card marquee__item" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                        <!-- 1 -->
-                        <div class="card marquee__item" style="width: 18rem;">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                            </div>
-                        </div>
-
-
-                    </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-center border-0 py-5 rounded-5">
+                <div class="card-header bg-body border-0">
+                  <img src="./assets/img/icon-2.png" alt="" />
                 </div>
-            </section>
-        </main>
+                <div class="card-body">
+                  <h5 class="card-title mb-4">
+                    Unique & <br />
+                    Hard-to-Find IT Products
+                  </h5>
+                  <p class="card-text lead">
+                    Get your hands on the latest and most unique IT products
+                    that are not easily found elsewhere.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card text-center border-0 py-5 rounded-5">
+                <div class="card-header bg-body border-0">
+                  <img src="./assets/img/icon-3.png" alt="" />
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title mb-4">
+                    New Arrivals <br />
+                    Assistance
+                  </h5>
+                  <p class="card-text lead">
+                    Need something specific? We can help you find the latest IT
+                    products just hitting the market.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"></script>
+      <section class="py-5 mt-5" id="testimonial">
+        <h4 class="fw-bold text-center">What Our Merchants Say</h4>
+        <div class="container">
+          <div class="marquee marquee--3">
+            <!-- 1 -->
+            <div class="card marquee__item" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Card subtitle
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+            <!-- 1 -->
+            <div class="card marquee__item" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Card subtitle
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+            <!-- 1 -->
+            <div class="card marquee__item" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Card subtitle
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+            <!-- 1 -->
+            <div class="card marquee__item" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Card subtitle
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+            <!-- 1 -->
+            <div class="card marquee__item" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Card subtitle
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+            <!-- 1 -->
+            <div class="card marquee__item" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">
+                  Card subtitle
+                </h6>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"></script>
-    </body>
+      <section class="py-5">
+        <div class="container">
+          <div class="row gx-4 align-items-center">
+            <div class="col-md-6">
+              <div class="me-md-2 me-lg-5">
+                <img class="img-fluid rounded-3" src="./assets/img/hero.png" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="ms-md-2 ms-lg-5 mt-5 mt-md-0">
+                <h2 class="display-6 fw-bold">
+                  Ready to Take Your IT Business to the Next Level?
+                </h2>
 
+                <p class="lead">
+                  Join thousands of merchants who trust Thrive Marketplace for
+                  their IT needs.
+                </p>
+                <div class="mb-3">
+                  <a href="" class="me-2">
+                    <img
+                      src="./assets/img/logo-playstore.png"
+                      class="img"
+                      width="156px"
+                      alt="playstore image"
+                    />
+                  </a>
+                  <a href="" class="me-2">
+                    <img
+                      src="./assets/img/logo-ios.png"
+                      class="img"
+                      width="130px"
+                      alt="appstore image"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="py-4">
+        <div class="container">
+          <div class="row justify-content-between pt-4 pb-3 pb-lg-4">
+            <div class="col-12 col-lg-5">
+              <a href=""
+                ><img
+                  alt="Free Frontend Logo"
+                  class="img-fluid mb-5"
+                  src="./assets/img/logo.png"
+                  width="200"
+              /></a>
+              <div class="mb-3">
+                <a href="" class="me-2">
+                  <img
+                    src="./assets/img/logo-playstore.png"
+                    class="img"
+                    width="156px"
+                    alt="playstore image"
+                  />
+                </a>
+                <a href="" class="me-2">
+                  <img
+                    src="./assets/img/logo-ios.png"
+                    class="img"
+                    width="130px"
+                    alt="appstore image"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 small mb-4 md-lg-0 pt-1">
+              <h4 class="mb-4">Quick Links</h4>
+
+              <p class="mb-1">
+                Email :
+                <a class="text-dark text-decoration-none" href="">
+                  marketing@thrive.co.id
+                </a>
+              </p>
+              <p class="mb-1">
+                Sales
+                <a class="text-dark text-decoration-none" href="">
+                  +6282299988870
+                </a>
+              </p>
+            </div>
+            <div class="col-12 col-lg-3 pt-1 small">
+              <h4 class="mb-4">Quick Links</h4>
+
+              <p class="mb-1">
+                PT. Gema Teknologi Cahaya Gemilang Podomoro City Ruko GSA 8DH,
+              </p>
+              <p class="mb-1">
+                Jl. Letjen S. Parman, RT.15/RW.5, Tj. Duren Selatan, Kec. Grogol
+                petamburan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta
+                11460
+              </p>
+            </div>
+          </div>
+          <div class="border-top d-lg-none"></div>
+          <div class="d-lg-flex justify-content-center py-3">
+            <div class="small">
+              <span class="d-block d-lg-inline text-muted mb-2 mb-lg-0 me-lg-5"
+                >
+                © 2024 Thrive Marketplace. All rights reserved.
+                </span
+              >
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
