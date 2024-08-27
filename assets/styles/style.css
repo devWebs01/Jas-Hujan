@@ -1,0 +1,39 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  background: #fafafa;
+}
+
+.btn-primary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: #6528e0;
+  ;
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #511bbc;
+  --bs-btn-hover-border-color: #6528e0;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #5a23c8;
+  --bs-btn-active-border-color: #5a23c8;
+}
+
+.text-primary {
+  color: #5c40cc !important;
+}
+
+.bg-primary {
+  background-color: #5c40cc !important;
+}
+
+.border-primary {
+  border-color: #5c40cc !important;
+}
+
+#download {
+  background-color: #5c40cc !important;
+  height: 100%;
+  padding: 200px 0;
+}
