@@ -1,6 +1,6 @@
 body {
     font-family: "Poppins", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
     background: #fafafa;
 }
@@ -39,8 +39,11 @@ body {
 }
 
 #icon {
-    background-color: #f4f3f8
-;
+    background-color: #FAFAFA;
+}
+
+#why-choose .card:hover {
+     transform: scale(1.04); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 /* Infinity Scroll */
