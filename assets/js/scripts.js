@@ -1,3 +1,5 @@
+AOS.init();
+
 const marquees = Array.from(document.querySelectorAll(".marquee"));
 
 class Marquee {

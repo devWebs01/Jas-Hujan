@@ -68,6 +68,9 @@
       rel="stylesheet" />
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
+    <!-- animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
 
@@ -127,7 +130,7 @@
         </div>
       </section>
 
-      <section class="py-5 mt-5" id="why-choose">
+      <section class="py-5 mt-5" id="why-choose" data-aos="fade-up" data-aos-duration="1000">
         <h2 class="fw-bold text-center mb-5">Why Choose Thrive Marketplace?</h2>
         <div class="container">
           <div class="row d-flex justify-content-center gy-5">
@@ -189,7 +192,7 @@
         </div>
       </section>
 
-      <section class="py-5 mt-5" id="testimonial">
+      <section class="py-5 mt-5" id="testimonial" data-aos="fade-up" data-aos-duration="1000">
         <h2 class="fw-bold text-center mb-5">What Our Merchants Say</h2>
         <div class="container">
           <section class="marquees__wrapper">
@@ -663,7 +666,7 @@
         </div>
       </section>
 
-      <section class="py-5 mt-5" id="location">
+      <section class="py-5 mt-5" id="location" data-aos="fade-up" data-aos-duration="1000">
         <h2 class="fw-bold text-center mb-5">Our Location</h2>
         <div class="container">
           <div class="row d-flex justify-content-center gy-5">
@@ -716,7 +719,7 @@
         </div>
       </section>
 
-      <section class="py-5">
+      <section class="py-5" data-aos="fade-up" data-aos-duration="1000">
         <div class="container">
           <div class="row gx-4 align-items-center">
             <div class="col-md-6">
@@ -747,65 +750,56 @@
           </div>
         </div>
       </section>
-
-      <footer class="py-4">
-        <div class="container">
-          <div class="row justify-content-between pt-4 pb-3 pb-lg-4">
-            <div class="col-12 col-lg-5">
-              <a href="">
-                <img alt="logo footer" class="img-fluid mb-3" src="./assets/img/logo.svg" width="150" />
-              </a>
-              <div class="mb-3">
-                <a href="" class="me-2">
-                  <img src="./assets/img/logo-playstore.png" class="img" width="156px" alt="playstore image" />
-                </a>
-                <a href="" class="me-2">
-                  <img src="./assets/img/logo-ios.png" class="img" width="130px" alt="appstore image" />
-                </a>
-              </div>
-            </div>
-            <div class="col-12 col-lg-4 small mb-4 md-lg-0 pt-1">
-              <h4 class="mb-3 fw-semibold">Support</h4>
-
-              <p class="mb-1">
-                Email :
-                <a class="text-dark text-decoration-none" href="">
-                  marketing@thrive.co.id
-                </a>
-              </p>
-              <p class="mb-1">
-                Sales
-                <a class="text-dark text-decoration-none" href="">
-                  +6282299988870
-                </a>
-              </p>
-            </div>
-            <div class="col-12 col-lg-3 pt-1 small">
-              <h4 class="mb-3 fw-semibold">Our Location</h4>
-
-              <p class="mb-1">
-                PT. Gema Teknologi Cahaya Gemilang Podomoro City Ruko GSA 8DH,
-              </p>
-              <p class="mb-1">
-                Jl. Letjen S. Parman, RT.15/RW.5, Tj. Duren Selatan, Kec. Grogol
-                petamburan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta
-                11460
-              </p>
-            </div>
-          </div>
-          <div class="border-top d-lg-none"></div>
-          <div class="d-lg-flex justify-content-center py-3">
-            <div class="small">
-              <span class="d-block d-lg-inline text-muted mb-2 mb-lg-0 me-lg-5">
-                © 2024 Thrive Marketplace. All rights reserved.
-              </span>
-            </div>
-          </div>
-      </footer>
     </main>
 
-    <footer>
-      <!-- place footer here -->
+    <footer class="py-4" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <div class="row justify-content-between pt-4 pb-3 pb-lg-4">
+          <a href="">
+            <img alt="logo footer" class="img-fluid mb-3" src="./assets/img/logo.svg" width="150" />
+          </a>
+          <div class="col-12 col-lg-5">
+            <p class="small col-10">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur temporibus vero error officiis deleniti cupiditate quo quis doloribus ullam debitis? Assumenda repellendus recusandae quia inventore dicta doloribus optio, quas magni!
+            </p>
+          </div>
+          <div class="col-12 col-lg-4 small mb-4 md-lg-0 pt-1">
+            <h6 class="mb-3 fw-semibold">Support</h6>
+
+            <p class="mb-1">
+              Email :
+              <a class="text-dark text-decoration-none" href="">
+                marketing@thrive.co.id
+              </a>
+            </p>
+            <p class="mb-1">
+              Sales
+              <a class="text-dark text-decoration-none" href="">
+                +6282299988870
+              </a>
+            </p>
+          </div>
+          <div class="col-12 col-lg-3 pt-1 small">
+            <h6 class="mb-2 fw-semibold">Join Us</h6>
+
+            <div class="mb-3">
+              <a href="" class="me-2">
+                <img src="./assets/img/logo-playstore.png" class="img" width="156px" alt="playstore image" />
+              </a>
+              <a href="" class="me-2">
+                <img src="./assets/img/logo-ios.png" class="img" width="130px" alt="appstore image" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="border-top d-lg-none"></div>
+        <div class="d-lg-flex justify-content-center py-3">
+          <div class="small">
+            <span class="d-block d-lg-inline text-muted mb-2 mb-lg-0 me-lg-5">
+              © 2024 Thrive Marketplace. All rights reserved.
+            </span>
+          </div>
+        </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -815,6 +809,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 
     <script src="./assets/js/scripts.js"></script>
   </body>
