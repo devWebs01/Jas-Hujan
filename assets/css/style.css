@@ -5,6 +5,10 @@ body {
   background: #fafafa;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .btn-primary {
   --bs-btn-font-weight: 600;
   --bs-btn-color: var(--bs-white);
