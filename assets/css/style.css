@@ -332,3 +332,53 @@ a {
   color: #ff0000;
   /* Sesuaikan dengan warna yang diinginkan */
 }
+
+.position-relative {
+    position: relative;
+}
+
+.phone-image {
+    position: relative;
+    z-index: 2;
+}
+
+.background-circle {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 400px; /* Ukuran lingkaran, sesuaikan dengan kebutuhan */
+    height: 400px;
+    background-color: #C8BAFF; /* Warna lingkaran */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Media query untuk mode tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .background-circle {
+      width: 300px; /* Ukuran lingkaran untuk tablet */
+      height: 300px;
+      top: 22%; /* Menggeser posisi sedikit ke bawah */
+      left: 18%; /* Menggeser posisi sedikit ke kiri */
+  }
+}
+
+/* Media query untuk mode ponsel */
+@media (max-width: 767px) {
+  .background-circle {
+      width: 300px; /* Ukuran lingkaran untuk ponsel */
+      height: 300px;
+      top: 25%; /* Posisikan kembali di tengah */
+      left: 10%;
+  }
+}
+
+/* Media query untuk mode desktop */
+@media (min-width: 1025px) {
+  .background-circle {
+    width: 350px; /* Ukuran lingkaran untuk desktop */
+    height: 350px;
+    
+  }
+}
