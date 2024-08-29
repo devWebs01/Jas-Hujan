@@ -88,39 +88,36 @@
 
 <body>
   <!-- navbar -->
-  <header>
-    <div class="header-nav mt-3">
-      <nav class="navbar sticky">
-        <div class="container">
-          <a class="navbar-brand">
-            <picture>
-              <source loading="lazy" srcset="./assets/img/logo.svg" type="image/svg+xml">
-              <img loading="lazy" title="Logo Navbar" src="./assets/img/logo.svg" alt="Logo Navbar" width="100" />
-            </picture>
-          </a>
 
-          <div class="justify-content-end">
-            <a class="btn text-dark border-0 fw-semibold" href="#home" role="button">
-              Home
-            </a>
-            <a class="btn text-dark border-0 fw-semibold" href="#why-choose" role="button">
-              Features
-            </a>
-            <a class="btn text-dark border-0 fw-semibold" href="#testimonial" role="button">
-              Testimonial
-            </a>
-            <a class="btn btn-primary rounded-5 p-2" href="#started" role="button">
-              Get Started
-            </a>
+  <div class="header-nav">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <picture>
+            <source loading="lazy" srcset="./assets/img/logo.svg" type="image/svg+xml">
+            <img loading="lazy" title="Logo Navbar" src="./assets/img/logo.svg" alt="Logo Navbar" width="100" />
+          </picture>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" aria-current="page" href="#started">Home</a>
+            <a class="nav-link" href="#why-choose">Features</a>
+            <a class="nav-link" href="#testimonial">Testimonial</a>
+            <a class="nav-link border rounded-5 bg-primary text-white" href="#apps">Get Started</a>
           </div>
         </div>
-      </nav>
-    </div>
-  </header>
+      </div>
+    </nav>
+  </div>
   <main>
     <!-- started -->
     <section class="py-5" id="started">
-      <div class="container">
+      <div class="container mt-5 pt-5">
         <div class="row justify-content-center align-items-center">
           <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-up" data-aos-duration="1000">
             <div class="pe-lg-3">
@@ -715,7 +712,8 @@
                   <h6 class="text-white">
                     <a href="https://www.google.com/maps">Jakarta Office</a>
                   </h6>
-                  <span class="small">Podomoro City Ruko CSA 8DH, Jl. Letjen S. Parman, RT.15/RW.S, TJ. Duren Sel., Kec. Grogol
+                  <span class="small">Podomoro City Ruko CSA 8DH, Jl. Letjen S. Parman, RT.15/RW.S, TJ. Duren Sel., Kec.
+                    Grogol
                     petamburan, Kota Jakarta
                     Barat, Daerah Khusus Ibukota Jakarta 11460</span>
                 </div>
@@ -731,7 +729,8 @@
                   <h6 class="text-white">
                     <a href="https://www.google.com/maps">ET Robotic Showcase Center</a>
                   </h6>
-                  <span class="small">Gedung PID 4.0, Jl. Raya Kby. Lama Lantai 8, Sukabumi Sel, Kec. Kb. Jeruk, Kota Jakarta Selatan,
+                  <span class="small">Gedung PID 4.0, Jl. Raya Kby. Lama Lantai 8, Sukabumi Sel, Kec. Kb. Jeruk, Kota
+                    Jakarta Selatan,
                     Daerah Khusus Ibukota
                     Jakarta 11560</span>
                 </div>
@@ -747,7 +746,8 @@
                   <h6 class="text-white">
                     <a href="https://www.google.com/maps">Tangerang Office</a>
                   </h6>
-                  <span class="small">Surya Grand Cisoka, Blok F1 unit 3A. Jln. Raya Cisoka No. 2 Bojongloa, kec. Cisoka. Kab.
+                  <span class="small">Surya Grand Cisoka, Blok F1 unit 3A. Jln. Raya Cisoka No. 2 Bojongloa, kec.
+                    Cisoka. Kab.
                     Tangerang. Banten 15730</span>
                 </div>
                 <a href="https://www.google.com/maps" class="icon image-popup">
@@ -762,7 +762,8 @@
                   <h6 class="text-white">
                     <a href="https://www.google.com/maps">Showroom Jambi</a>
                   </h6>
-                  <span class="small">Jl. Dr. Moh. Roem No 38, Pasar Jambi, Kecamatan Pasar Jambi, Kota Jambi, Jambi 36113</span>
+                  <span class="small">Jl. Dr. Moh. Roem No 38, Pasar Jambi, Kecamatan Pasar Jambi, Kota Jambi, Jambi
+                    36113</span>
                 </div>
                 <a href="https://www.google.com/maps" class="icon image-popup">
                   <span class="small">View on Maps</span>
@@ -778,7 +779,7 @@
     </section>
 
     <!-- download -->
-    <section class="py-5">
+    <section class="py-5" id="apps">
       <div class="container">
         <div class="row gx-4 align-items-center">
           <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000">

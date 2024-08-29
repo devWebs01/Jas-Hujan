@@ -77,3 +77,42 @@ var swiper = new Swiper(".mySwiper", {
     },
 },
 });
+
+let lastScrollTop = 0;
+const navbar = document.querySelector('.header-nav');
+
+window.addEventListener('scroll', function () {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        // Scroll ke bawah
+        navbar.classList.add('hidden');
+    } else {
+        // Scroll ke atas
+        navbar.classList.remove('hidden');
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Untuk menghindari nilai negatif
+});
+
+document.addEventListener("scroll", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+    let currentSectionId = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollY >= sectionTop - sectionHeight / 3) {
+            currentSectionId = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${currentSectionId}`) {
+            link.classList.add("active");
+        }
+    });
+});

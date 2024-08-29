@@ -302,3 +302,33 @@ a {
   bottom: auto;
   top: auto;
 }
+
+.header-nav {
+  transition: top 0.3s;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background: #fafafa;
+}
+
+.hidden {
+  top: -240px;
+  /* Sesuaikan dengan tinggi navbar Anda */
+}
+
+.header-nav .navbar-nav {
+  margin-left: auto;
+  /* Menggeser navbar ke kanan */
+}
+
+.header-nav .navbar-nav .nav-link {
+  margin-left: 20px;
+  padding: 5px 15px;
+  /* Jarak antar item di navbar */
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #ff0000;
+  /* Sesuaikan dengan warna yang diinginkan */
+}
