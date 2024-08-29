@@ -1,3 +1,5 @@
+AOS.init();
+
 const marquees = Array.from(document.querySelectorAll(".marquee"));
 
 class Marquee {
@@ -54,3 +56,63 @@ class Marquee {
 }
 
 for (const m of marquees) new Marquee({ el: m });
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    grabCursor: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+    640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+    },
+    
+    1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+    },
+},
+});
+
+let lastScrollTop = 0;
+const navbar = document.querySelector('.header-nav');
+
+window.addEventListener('scroll', function () {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        // Scroll ke bawah
+        navbar.classList.add('hidden');
+    } else {
+        // Scroll ke atas
+        navbar.classList.remove('hidden');
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Untuk menghindari nilai negatif
+});
+
+document.addEventListener("scroll", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+    let currentSectionId = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollY >= sectionTop - sectionHeight / 5) {
+            currentSectionId = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${currentSectionId}`) {
+            link.classList.add("active");
+        }
+    });
+});

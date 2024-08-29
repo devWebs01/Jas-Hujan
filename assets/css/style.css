@@ -1,171 +1,395 @@
 body {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background: #fafafa;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #fafafa;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .btn-primary {
-    --bs-btn-font-weight: 600;
-    --bs-btn-color: var(--bs-white);
-    --bs-btn-bg: #6528e0;
-    ;
-    --bs-btn-border-color: var(--bd-violet-bg);
-    --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: #511bbc;
-    --bs-btn-hover-border-color: #6528e0;
-    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-    --bs-btn-active-color: var(--bs-btn-hover-color);
-    --bs-btn-active-bg: #5a23c8;
-    --bs-btn-active-border-color: #5a23c8;
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: #6528e0;
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #511bbc;
+  --bs-btn-hover-border-color: #6528e0;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #5a23c8;
+  --bs-btn-active-border-color: #5a23c8;
 }
 
 .text-primary {
-    color: #5c40cc !important;
+  color: #5c40cc !important;
+}
+
+.icon-feature {
+  background: #C8BAFF;
+  border-radius: 100%;
+
+}
+
+.btn-light {
+  /* --bs -btn-hover-border-color:  #5c40cc !important; */
+  --bs-btn-active-border-color: #6528e0;
+  --bs-btn-hover-border-color: #5c40cc !important;
 }
 
 .bg-primary {
-    background-color: #5c40cc !important;
+  background-color: #5c40cc !important;
 }
 
 .border-primary {
-    border-color: #5c40cc !important;
+  border-color: #5c40cc !important;
 }
 
 #download {
-    background-color: #5c40cc !important;
-    height: 100%;
-    padding: 200px 0;
+  background-color: #5c40cc !important;
+  height: 100%;
+  padding: 200px 0;
 }
 
 #icon {
-    background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
-#why-choose .card:hover {
-     transform: scale(1.04); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+.card-header {
+  background-color: transparent;
 }
 
 /* Infinity Scroll */
 
 :root {
-    --shade1: #FAFAFA;
-    --shade2: #FAFAFA;
-    --primaryColor: var(--shade2);
-    --backgroundColor: #FAFAFA;
-    --backgroundColorDark: var(--primaryColor);
-    --size: 300px;
-    --gap: 20px;
-    --cardShadow: 0 4px 7px rgb(0 0 0 / 25%);
-    --paddingNormal: 120px;
-    --paddingSmall: 42px;
-    --textColor: var(--shade2);
-    --textColorDark: #fff;
-    --linkColor: #06c;
-    --gradient1: radial-gradient(164.75% 100% at 50% 0,
-            var(--shade1) 0,
-            var(--shade2) 48.73%);
+  --shade1: #fafafa;
+  --shade2: #fafafa;
+  --primaryColor: var(--shade2);
+  --backgroundColor: #fafafa;
+  --backgroundColorDark: var(--primaryColor);
+  --size: 300px;
+  --gap: 20px;
+  --cardShadow: 0 4px 7px rgb(0 0 0 / 25%);
+  --paddingNormal: 120px;
+  --paddingSmall: 42px;
+  --textColor: var(--shade2);
+  --textColorDark: #fff;
+  --linkColor: #06c;
+  --gradient1: radial-gradient(164.75% 100% at 50% 0,
+      var(--shade1) 0,
+      var(--shade2) 48.73%);
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .lockup {
-    padding: 0 16px;
+  padding: 0 16px;
 }
 
-.lockup .icon {
-    width: 64px;
-    height: 64px;
-    margin: 0 auto;
-    user-select: none;
-    pointer-events: none;
+.lockup .avatar {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  user-select: none;
+  pointer-events: none;
 }
 
-.lockup .icon img {
-    width: 100%;
-    height: 100%;
-    display: block;
+.lockup .avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .blurb {
-    font-weight: 100;
+  font-weight: 100;
 }
 
 a {
-    color: var(--linkColor);
-    text-decoration: none;
+  color: var(--linkColor);
+  text-decoration: none;
 }
 
 .marquees__wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap);
-    margin: auto;
-    overflow-x: hidden;
-    width: 100%;
-    max-width: var(--maxWidth);
-    mask-image: linear-gradient(to right,
-            hsl(0 0% 0% / 0),
-            var(--backgroundColorDark) 20%,
-            var(--backgroundColorDark) 80%,
-            hsl(0 0% 0% / 0));
-    background: var(--gradient1);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  margin: auto;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: var(--maxWidth);
+  mask-image: linear-gradient(to right,
+      hsl(0 0% 0% / 0),
+      var(--backgroundColorDark) 20%,
+      var(--backgroundColorDark) 80%,
+      hsl(0 0% 0% / 0));
+  background: var(--gradient1);
 }
 
 .marquee {
-    position: relative;
-    display: flex;
-    gap: var(--gap);
+  position: relative;
+  display: flex;
+  gap: var(--gap);
 }
 
 .marquee__group {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    gap: var(--gap);
-    min-width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  min-width: 100%;
 }
 
 .marquee__group .item {
-    width: 378px;
-    height: 212px;
-    overflow: hidden;
-    transition: 300ms ease-in-out;
-    background: var(--gradient1);
+  height: 200px;
+  width: 500px;
+  overflow: hidden;
+  transition: 300ms ease-in-out;
+  background: var(--gradient1);
 }
 
 .marquee:hover .item {
-    opacity: 0.5;
+  opacity: 0.5;
+}
+
+.marquee__group .item .card {
+  height: 200px;
+  width: 500px;
 }
 
 .item:hover {
-    opacity: 1 !important;
-    scale: 1.03 1;
+  opacity: 1 !important;
 }
 
 .item:hover img {
-    scale: 1 1.03;
+  scale: 1 1.03;
 }
 
 .item img {
-    width: 30px;
-    height: 30px;
-    display: block;
-    transition: 300ms ease-in-out;
-    scale: 1.03;
+  width: 50px;
+  height: 50px;
+  display: block;
+  transition: 300ms ease-in-out;
+  scale: 1.03;
 }
 
-@media (max-width: 900px) {
-    :root {
-        --gap: 10px;
-    }
+/* @media (max-width: 900px) {
+  :root {
+    --gap: 10px;
+  }
 
-    .marquee .item {
-        width: 210px;
-        height: 118px;
-    }
+  .marquee .item {
+    width: 210px;
+    height: 118px;
+  }
+} */
 
+#location .card {
+  height: 450px;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+.map {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  z-index: 0;
+  height: 320px;
+}
+
+.map:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  background: #5C40CC;
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.map:hover:after,
+.map:focus:after {
+  opacity: 0.8;
+}
+
+.map img {
+  vertical-align: middle;
+  border-style: none;
+  transition: all 0.6s ease;
+
+}
+
+.map:hover img {
+  transform: scale(1.3);
+}
+
+.map .text {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  padding: 2em;
+  opacity: 0;
+  z-index: 2;
+  transition: all 0.6s ease;
+}
+
+.map:hover .text {
+  opacity: 1;
+  top: 0;
+}
+
+.map a {
+  text-decoration: none;
+  background-color: transparent;
+  transition: 0.3s all ease;
+}
+
+.image-popup {
+  cursor: zoom-in;
+}
+
+.map .icon {
+  position: absolute;
+  bottom: -50px;
+  left: 2em;
+  width: auto;
+  transform: translateY(-50%);
+  transition: all 0.6s ease;
+  opacity: 0;
+  z-index: 2;
+}
+
+.map:hover .icon {
+  bottom: 10px;
+  opacity: 1;
+}
+
+.map .text span {
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.map .icon span {
+  color: #fff;
+}
+
+.map .text * {
+  color: #fff;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: auto;
+  top: auto;
+}
+
+.header-nav {
+  transition: top 0.3s;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background: #fafafa;
+}
+
+.hidden {
+  top: -240px;
+  /* Sesuaikan dengan tinggi navbar Anda */
+}
+
+.header-nav .navbar-nav {
+  margin-left: auto;
+  /* Menggeser navbar ke kanan */
+}
+
+.header-nav .navbar-nav .nav-link {
+  margin-left: 20px;
+  padding: 5px 15px;
+  /* Jarak antar item di navbar */
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #ff0000;
+  /* Sesuaikan dengan warna yang diinginkan */
+}
+
+.position-relative {
+    position: relative;
+}
+
+.phone-image {
+    position: relative;
+    z-index: 2;
+}
+
+.background-circle {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    width: 400px; /* Ukuran lingkaran, sesuaikan dengan kebutuhan */
+    height: 400px;
+    background-color: #C8BAFF; /* Warna lingkaran */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Media query untuk mode tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .background-circle {
+      width: 300px; /* Ukuran lingkaran untuk tablet */
+      height: 300px;
+      top: 22%; /* Menggeser posisi sedikit ke bawah */
+      left: 18%; /* Menggeser posisi sedikit ke kiri */
+  }
+}
+
+/* Media query untuk mode ponsel */
+@media (max-width: 767px) {
+  .background-circle {
+      width: 300px; /* Ukuran lingkaran untuk ponsel */
+      height: 300px;
+      top: 25%; /* Posisikan kembali di tengah */
+      left: 10%;
+  }
+}
+
+/* Media query untuk mode desktop */
+@media (min-width: 1025px) {
+  .background-circle {
+    width: 350px; /* Ukuran lingkaran untuk desktop */
+    height: 350px;
+    
+  }
 }
