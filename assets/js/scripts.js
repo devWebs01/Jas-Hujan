@@ -104,7 +104,7 @@ document.addEventListener("scroll", function () {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
 
-        if (scrollY >= sectionTop - sectionHeight / 3) {
+        if (scrollY >= sectionTop - sectionHeight / 5) {
             currentSectionId = section.getAttribute("id");
         }
     });
