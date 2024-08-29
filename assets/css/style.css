@@ -27,6 +27,12 @@ html {
   color: #5c40cc !important;
 }
 
+.icon-feature {
+  background: #C8BAFF;
+  border-radius: 100%;
+
+}
+
 .btn-light {
   /* --bs -btn-hover-border-color:  #5c40cc !important; */
   --bs-btn-active-border-color: #6528e0;
@@ -147,6 +153,10 @@ a {
 
 .marquee:hover .item {
   opacity: 0.5;
+}
+
+.marquee__group .item .card {
+  height: 900px;
 }
 
 .item:hover {
