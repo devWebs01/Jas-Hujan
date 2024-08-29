@@ -344,3 +344,7 @@ a {
   color: #ff0000;
   /* Sesuaikan dengan warna yang diinginkan */
 }
+
+.text-justify {
+  text-align: justify;
+}
