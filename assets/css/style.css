@@ -83,10 +83,6 @@ html {
       var(--shade2) 48.73%);
 }
 
-* {
-  box-sizing: border-box;
-}
-
 .lockup {
   padding: 0 16px;
 }
