@@ -144,8 +144,8 @@ a {
 }
 
 .marquee__group .item {
-  width: 378px;
-  height: 212px;
+  height: 200px;
+  width: 500px;
   overflow: hidden;
   transition: 300ms ease-in-out;
   background: var(--gradient1);
@@ -156,7 +156,8 @@ a {
 }
 
 .marquee__group .item .card {
-  height: 900px;
+  height: 200px;
+  width: 500px;
 }
 
 .item:hover {
@@ -175,7 +176,7 @@ a {
   scale: 1.03;
 }
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   :root {
     --gap: 10px;
   }
@@ -184,7 +185,7 @@ a {
     width: 210px;
     height: 118px;
   }
-}
+} */
 
 #location .card {
   height: 450px;
