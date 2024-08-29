@@ -47,10 +47,11 @@ html {
   border-color: #5c40cc !important;
 }
 
-#download {
+#apps .card {
   background-color: #5c40cc !important;
-  height: 100%;
-  padding: 200px 0;
+  padding: 60px 0;
+  color: white;
+  border: 0;
 }
 
 #icon {
