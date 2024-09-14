@@ -2,7 +2,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background: #fafafa;
+  background: #ffffff;
 }
 
 html {
@@ -12,11 +12,11 @@ html {
 .btn-primary {
   --bs-btn-font-weight: 600;
   --bs-btn-color: var(--bs-white);
-  --bs-btn-bg: #6528e0;
+  --bs-btn-bg: #ffc738;
   --bs-btn-border-color: var(--bd-violet-bg);
   --bs-btn-hover-color: var(--bs-white);
   --bs-btn-hover-bg: #511bbc;
-  --bs-btn-hover-border-color: #6528e0;
+  --bs-btn-hover-border-color: #ffc738;
   --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
   --bs-btn-active-color: var(--bs-btn-hover-color);
   --bs-btn-active-bg: #5a23c8;
@@ -35,7 +35,7 @@ html {
 
 .btn-light {
   /* --bs -btn-hover-border-color:  #5c40cc !important; */
-  --bs-btn-active-border-color: #6528e0;
+  --bs-btn-active-border-color: #ffc738;
   --bs-btn-hover-border-color: #5c40cc !important;
 }
 
