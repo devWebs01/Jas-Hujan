@@ -9,22 +9,26 @@ html {
   scroll-behavior: smooth;
 }
 
+
 .btn-primary {
   --bs-btn-font-weight: 600;
-  --bs-btn-color: var(--bs-white);
-  --bs-btn-bg: #ffc738;
-  --bs-btn-border-color: var(--bd-violet-bg);
-  --bs-btn-hover-color: var(--bs-white);
-  --bs-btn-hover-bg: #511bbc;
-  --bs-btn-hover-border-color: #ffc738;
-  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-  --bs-btn-active-color: var(--bs-btn-hover-color);
-  --bs-btn-active-bg: #5a23c8;
-  --bs-btn-active-border-color: #5a23c8;
+  --bs-btn-color: #ffffff; /* Tetap menggunakan warna putih dari palet */
+  --bs-btn-bg: #ffc738; /* Warna tombol utama */
+  --bs-btn-border-color: #b39d27; /* Border tombol */
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: #b39d27; /* Hover lebih gelap */
+  --bs-btn-hover-border-color: #b39d27;
+  --bs-btn-focus-shadow-rgb: #ffc738;
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: #b39d27;
+  --bs-btn-active-border-color: #b39d27;
+  border: #b39d27;
 }
 
+
+
 .text-primary {
-  color: #5c40cc !important;
+  color: #ffc738 !important; /* Warna teks utama */
 }
 
 .icon-feature {
@@ -36,26 +40,15 @@ html {
 .btn-light {
   /* --bs -btn-hover-border-color:  #5c40cc !important; */
   --bs-btn-active-border-color: #ffc738;
-  --bs-btn-hover-border-color: #5c40cc !important;
+  --bs-btn-hover-border-color: #b39d27 !important; /* Warna hover lebih gelap */
 }
 
 .bg-primary {
-  background-color: #5c40cc !important;
+  background-color: #ffc738 !important; /* Latar belakang warna utama */
 }
 
 .border-primary {
-  border-color: #5c40cc !important;
-}
-
-#apps .card {
-  background-color: #5c40cc !important;
-  padding: 60px 0;
-  color: white;
-  border: 0;
-}
-
-#icon {
-  background-color: #fafafa;
+  border-color: #ffc738 !important; /* Border warna utama */
 }
 
 .card-header {
